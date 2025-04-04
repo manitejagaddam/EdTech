@@ -15,7 +15,6 @@ user_input = []
 for col in feature_columns:
     user_input.append(st.slider(col, min_value=40, max_value=100, value = random.randint(40, 100)))
 
-# Predict career
 if st.button("Predict Career"):
     input_data = np.array(user_input).reshape(1, -1)
     prediction = model.predict(input_data)[0]
